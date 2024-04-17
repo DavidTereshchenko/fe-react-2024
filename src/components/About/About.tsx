@@ -9,7 +9,7 @@ function About() {
                 <div className={styles.about__information}>
                     <h1 className={styles.about__title}>About me</h1>
                     <p className={styles.about__text}>
-                        Hi! My name is David and I`m a Junior Frontend Developer. I am already familiar with main Web Technologies like
+                        Hi! My name is David and I&apos;m a Junior Frontend Developer. I am already familiar with main Web Technologies like
                         React, HTML, CSS, JavaScript and Git version control system.
                     </p>
                     <p className={styles.about__text}>
