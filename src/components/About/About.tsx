@@ -13,7 +13,10 @@ function About() {
                         React, HTML, CSS, JavaScript and Git version control system.
                     </p>
                     <p className={styles.about__text}>
-                        This page was developed during the course &apos;Intro to React&apos; from Masters Academy in 2024.
+                        This page was developed during the course{' '}
+                        <a href="https://www.mastersacademy.education/frontend-react-it">
+                            &apos;Intro to React&apos; from Masters Academy in 2024.
+                        </a>
                     </p>
                     <p className={styles.about__text}>
                         This is a social project from MOCG company where I got an opportunity with Frontend mentors and to create my own
