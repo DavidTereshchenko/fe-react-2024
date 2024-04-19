@@ -1,41 +1,39 @@
-.about__container {
+.aboutContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-  margin-top: 60px;
-  height: 100vh;
+  grid-template-columns: 1fr;
+  row-gap: 1.875rem;
+  margin-top: 1.875rem;
+  padding: 0 1.875rem;
 }
 
 .picture {
-  border-radius: 40px;
-  margin-top: 145px;
-  max-width: 500px;
-  max-height: 489px;
-  object-fit: fill;
+  width: 100%;
+  height: 18.375rem;
+  grid-row-start: 1;
+  border-radius: 2.5rem;
 }
 
-.about__information {
+.aboutInformation {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin-top: 60px;
+  gap: 1.875rem;
 }
 
-.about__text {
-  font-size: 1.375rem;
+.aboutTitle {
+  font-size: 1.6875rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.aboutText {
+  font-size: var(--basicText);
   font-weight: 400;
-  line-height: 2rem
+  line-height: 1.75rem;
 }
 
-.about__title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
+@media (min-width: 600px) {
 
-@media (max-width: 1000px) {
-
-  .about__container {
+  .aboutContainer {
     grid-template-columns: 1fr;
     gap: 30px;
     margin-top: 30px;
@@ -43,49 +41,54 @@
     align-self: center;
   }
 
-  .about__information {
+  .aboutInformation {
     margin-top: 0;
   }
 
   .picture {
-    grid-row-start: 1;
     max-width: 512px;
-    max-height: 400px;
-    margin-top: 30px;
+    height: 400px;
     object-fit: cover;
   }
 
-  .about__title {
+  .aboutTitle {
     margin-bottom: 0;
   }
 }
 
-@media (max-width: 550px) {
+@media (min-width: 1000px) {
 
-  .about__container {
-    row-gap: 1.875rem;
-    margin-top: 0;
+  .aboutContainer {
+    gap: 6.25rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3.75rem;
+    height: 100vh;
   }
 
   .picture {
-    width: 100%;
-    grid-row-start: 1;
-    height: 18.375rem;
+    margin-top: 9.0625rem;
+    max-width: 31.25rem;
+    height: 30.5625rem;
+    object-fit: fill;
+    grid-row-start: auto;
   }
 
-  .about__information {
+  .aboutInformation {
+    display: flex;
+    flex-direction: column;
     gap: 1.875rem;
+    margin-top: 3.75rem;
   }
 
-  .about__title {
-    font-size: 1.6875rem;
-    font-weight: 600;
-    margin-bottom: 0;
-  }
-
-  .about__text {
-    font-size: var(--basicText);
+  .aboutText {
+    font-size: 1.375rem;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 2rem
+  }
+
+  .aboutTitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
   }
 }

@@ -5,6 +5,10 @@
   --hoverRed: #D43824;
   --darkestGrey: #111;
   --basicText: 1rem;
+
+  max-width: 1175px;
+  min-width: 390px;
+  margin: 0 auto;
 }
 
 * {
@@ -60,11 +64,3 @@ button {
   background-color: transparent;
 }
 
-/* Setting adaptation */
-
-[class*="__container"] {
-  max-width: 1175px;
-  min-width: 390px;
-  padding: 0 30px;
-  margin: 0 auto;
-}
