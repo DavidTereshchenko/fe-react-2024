@@ -9,6 +9,9 @@
   --grey3: #CCC;
   --grey4: #E1E1E1;
   --greyHover: #F1F1F1;
+  --white: rgb(255, 255, 255, 1);
+  --textColor: #221F1F;
+
 
   --basicText: 1rem;
 
@@ -67,6 +70,6 @@ button {
   font-size: inherit;
   cursor: pointer;
   color: inherit;
-  background-color: rgb(255, 255, 255, 1);
+  background-color: var(--white);
 }
 
