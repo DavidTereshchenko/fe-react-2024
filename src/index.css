@@ -4,6 +4,12 @@
   --mainRed: #EF4934;
   --hoverRed: #D43824;
   --darkestGrey: #111;
+  --grey1: #333;
+  --grey2: #585858;
+  --grey3: #CCC;
+  --grey4: #E1E1E1;
+  --greyHover: #F1F1F1;
+
   --basicText: 1rem;
 
   max-width: 1175px;
@@ -61,6 +67,6 @@ button {
   font-size: inherit;
   cursor: pointer;
   color: inherit;
-  background-color: transparent;
+  background-color: rgb(255, 255, 255, 1);
 }
 
