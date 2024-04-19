@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat");
 
+:root {
+  --mainRed: #EF4934;
+  --hoverRed: #D43824;
+  --darkestGrey: #111;
+  --basicText: 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,10 +60,10 @@ button {
   background-color: transparent;
 }
 
-/* Налаштування адаптиву */
+/* Setting adaptation */
 
 [class*="__container"] {
-  max-width: 1175px; /* Обмежуючий + відступи */
+  max-width: 1175px;
   min-width: 390px;
   padding: 0 30px;
   margin: 0 auto;
