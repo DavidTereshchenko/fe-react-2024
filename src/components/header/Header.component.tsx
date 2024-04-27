@@ -5,7 +5,7 @@ import Logo from '@/img/logo.svg';
 import divider from '@/img/mode/divider.svg';
 import moon from '@/img/mode/moon.svg';
 import whiteSun from '@/img/mode/sun.svg';
-import sun from '@/img/mode/sun-black.svg';
+import darkSun from '@/img/mode/sun-black.svg';
 
 import styles from './header.module.css';
 export const HeaderComponent = () => (
@@ -15,7 +15,7 @@ export const HeaderComponent = () => (
                 <img src={Logo} alt="logo" />
                 <div className={styles.lightMode}>
                     <img src={whiteSun} alt="white sun" className={styles.whiteSun} />
-                    <img src={sun} alt="sun" className={styles.sun} />
+                    <img src={darkSun} alt="sun" className={styles.sun} />
                     <img src={divider} alt="divider" />
                     <img src={moon} alt="moon" />
                 </div>
