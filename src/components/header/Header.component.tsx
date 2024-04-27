@@ -1,11 +1,11 @@
-import Login from '@/img/buttons/Interface/Log_Out.svg';
+import login from '@/img/buttons/Interface/Log_Out.svg';
 import singUp from '@/img/buttons/User/User_Add.svg';
-import Basket from '@/img/cart.svg';
+import basket from '@/img/cart.svg';
 import Logo from '@/img/logo.svg';
-import Divider from '@/img/mode/divider.svg';
-import Moon from '@/img/mode/moon.svg';
+import divider from '@/img/mode/divider.svg';
+import moon from '@/img/mode/moon.svg';
 import whiteSun from '@/img/mode/sun.svg';
-import Sun from '@/img/mode/sun-black.svg';
+import sun from '@/img/mode/sun-black.svg';
 
 import styles from './header.module.css';
 export const HeaderComponent = () => (
@@ -15,9 +15,9 @@ export const HeaderComponent = () => (
                 <img src={Logo} alt="logo" />
                 <div className={styles.lightMode}>
                     <img src={whiteSun} alt="white sun" className={styles.whiteSun} />
-                    <img src={Sun} alt="sun" className={styles.sun} />
-                    <img src={Divider} alt="divider" />
-                    <img src={Moon} alt="moon" />
+                    <img src={sun} alt="sun" className={styles.sun} />
+                    <img src={divider} alt="divider" />
+                    <img src={moon} alt="moon" />
                 </div>
             </div>
             <div className={styles.menu}>
@@ -28,10 +28,10 @@ export const HeaderComponent = () => (
                         <li className={styles.account}>Your Account</li>
                     </ul>
                 </nav>
-                <img src={Basket} alt="basket" className={styles.basket} />
+                <img src={basket} alt="basket" className={styles.basket} />
                 <div className={styles.accountButtons}>
                     <button className={styles.loginButton}>
-                        <img src={Login} alt="login" />
+                        <img src={login} alt="login" />
                         Login
                     </button>
                     <button className={styles.singUpButton}>
