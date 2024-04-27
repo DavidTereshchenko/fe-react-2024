@@ -15,9 +15,10 @@
 
   --basicText: 1rem;
 
-  max-width: 1175px;
-  min-width: 390px;
+  max-width: 73.4375rem;
+  min-width: 24.375rem;
   margin: 0 auto;
+  padding: 0 1.875rem;
 }
 
 * {
@@ -26,10 +27,12 @@
   border: 0;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+* {
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
 }
 
 html,
@@ -69,7 +72,7 @@ button {
   font-weight: inherit;
   font-size: inherit;
   cursor: pointer;
-  color: inherit;
+  color: var(--textColor);
   background-color: var(--white);
 }
 
