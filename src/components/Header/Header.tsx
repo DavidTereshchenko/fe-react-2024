@@ -1,8 +1,8 @@
-import { Logo } from '@/components/Header/LogoAndMode/Logo.tsx';
-import { Menu } from '@/components/Header/Menu/Menu.tsx';
+import Logo from '@/components/Header/LogoAndMode/Logo.tsx';
+import Menu from '@/components/Header/Menu/Menu.tsx';
 
 import styles from './Header.module.css';
-const HeaderComponent = () => (
+const Header = () => (
     <header className={styles.header}>
         <div className={styles.headerBlock}>
             <Logo />
@@ -11,4 +11,4 @@ const HeaderComponent = () => (
     </header>
 );
 
-export default HeaderComponent;
+export default Header;

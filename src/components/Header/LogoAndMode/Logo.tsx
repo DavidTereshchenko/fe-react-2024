@@ -5,7 +5,7 @@ import moon from '@/img/mode/moon.svg';
 import sun from '@/img/mode/sun.svg';
 import sunBlack from '@/img/mode/sun-black.svg';
 
-export const Logo = () => (
+const Logo = () => (
     <div className={styles.logo}>
         <img src={logo} alt="logo" />
         <div className={styles.lightMode}>
@@ -16,3 +16,5 @@ export const Logo = () => (
         </div>
     </div>
 );
+
+export default Logo;

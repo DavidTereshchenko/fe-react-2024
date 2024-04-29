@@ -3,7 +3,7 @@ import login from '@/img/buttons/login.svg';
 import singUp from '@/img/buttons/singUp.svg';
 import basket from '@/img/cart.svg';
 
-export const Menu = () => (
+const Menu = () => (
     <div className={styles.menu}>
         <nav className={styles.screenTab}>
             <ul className={styles.menuList}>
@@ -26,3 +26,5 @@ export const Menu = () => (
         <div className={styles.burger}></div>
     </div>
 );
+
+export default Menu;
