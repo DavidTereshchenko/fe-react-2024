@@ -1,6 +1,6 @@
 import styles from '@/App.module.css';
 import About from '@/components/About/About.tsx';
-import Footer from '@/components/Footer/Footer.tsx';
+import FooterComponent from '@/components/Footer/Footer.component.tsx';
 import Header from '@/components/Header/Header.tsx';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
             <div className={styles.wrapper}>
                 <Header />
                 <About />
-                <Footer />
+                <FooterComponent />
             </div>
         </>
     );

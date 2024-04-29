@@ -1,7 +1,7 @@
 import styles from '@/components/Footer/Footer.module.css';
 import SocialIcon from '@/components/SocialIcon/SocialIcon.tsx';
 
-const Footer = () => (
+const FooterComponent = () => (
     <footer className={styles.footer}>
         <div className={styles.footerContainer}>
             <SocialIcon />
@@ -16,4 +16,4 @@ const Footer = () => (
     </footer>
 );
 
-export default Footer;
+export default FooterComponent;
