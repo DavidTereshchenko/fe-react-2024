@@ -1,4 +1,4 @@
-import styles from '@/components/Header/Menu/Menu.module.css';
+import styles from '@/components/Menu/Menu.module.css';
 import login from '@/img/buttons/login.svg';
 import singUp from '@/img/buttons/singUp.svg';
 import basket from '@/img/cart.svg';

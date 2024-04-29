@@ -4,19 +4,19 @@ import instagramIcon from '@/img/social/instagramIcon.svg';
 import linkedinIcon from '@/img/social/linkedinIcon.svg';
 
 const SocialIcon = () => {
-    const facebookLink = 'https://www.facebook.com/david.tereshchenko.77/';
-    const linkedinLink = 'https://www.linkedin.com/in/david-tereshchenko-7bb98b240/';
-    const instagramLink = 'https://www.instagram.com/davidushka_te/';
+    const FACEBOOK_URL = 'https://www.facebook.com/david.tereshchenko.77/';
+    const LINKEDIN_URL = 'https://www.linkedin.com/in/david-tereshchenko-7bb98b240/';
+    const INSTAGRAM_URL = 'https://www.instagram.com/davidushka_te/';
 
     return (
         <div className={styles.socialIcon}>
-            <a href={facebookLink}>
+            <a href={FACEBOOK_URL}>
                 <img src={facebookIcon} alt="Facebook" />
             </a>
-            <a href={linkedinLink}>
+            <a href={LINKEDIN_URL}>
                 <img src={linkedinIcon} alt="Linkedin" />
             </a>
-            <a href={instagramLink}>
+            <a href={INSTAGRAM_URL}>
                 <img src={instagramIcon} alt="Instagram" />
             </a>
         </div>

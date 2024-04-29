@@ -3,10 +3,10 @@ export interface Product {
     title: string;
     description: string;
     price: number;
-    images: [];
+    images: string[];
     creationAt: string;
     updatedAt: string;
-    category: {};
+    category: CategoryId;
 }
 
 export interface ProductId {
@@ -14,18 +14,10 @@ export interface ProductId {
     title: string;
     price: number;
     description: string;
-    images: [];
+    images: string[];
     creationAt: string;
     updatedAt: string;
-    category: {};
-}
-
-export interface Category {
-    id: number;
-    name: string;
-    image: string;
-    creationAt: string;
-    updatedAt: string;
+    category: CategoryId;
 }
 
 export interface CategoryId {

@@ -1,11 +1,11 @@
-import styles from '@/components/Header/LogoAndMode/Logo.module.css';
+import styles from '@/components/LogoAndMode/LogoAndMode.module.css';
 import logo from '@/img/logo.svg';
 import divider from '@/img/mode/divider.svg';
 import moon from '@/img/mode/moon.svg';
 import sun from '@/img/mode/sun.svg';
-import sunBlack from '@/img/mode/sun-black.svg';
+import sunBlack from '@/img/mode/sunBlack.svg';
 
-const Logo = () => (
+const LogoAndMode = () => (
     <div className={styles.logo}>
         <img src={logo} alt="logo" />
         <div className={styles.lightMode}>
@@ -17,4 +17,4 @@ const Logo = () => (
     </div>
 );
 
-export default Logo;
+export default LogoAndMode;
