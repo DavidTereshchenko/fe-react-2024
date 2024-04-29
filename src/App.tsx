@@ -1,13 +1,16 @@
+import styles from '@/App.module.css';
 import About from '@/components/About/About.tsx';
-import Footer from '@/components/footer/Footer.tsx';
-import { HeaderComponent } from '@/components/header/Header.component.tsx';
+import Footer from '@/components/Footer/Footer.tsx';
+import HeaderComponent from '@/components/Header/Header.component.tsx';
 
 function App() {
     return (
         <>
-            <HeaderComponent />
-            <About />
-            <Footer />
+            <div className={styles.wrapper}>
+                <HeaderComponent />
+                <About />
+                <Footer />
+            </div>
         </>
     );
 }
