@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 1.875rem;
-  margin-top: 1.875rem;
+  margin-top: 6.25rem;
   padding: 0 1.875rem;
 }
 
@@ -37,9 +37,8 @@
   .aboutContainer {
     grid-template-columns: 1fr;
     gap: 30px;
-    margin-top: 30px;
-    height: 0;
-    align-self: center;
+    margin-top: 110px;
+    justify-items: center;
   }
 
   .aboutInformation {
@@ -64,6 +63,7 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 3.75rem;
     height: 100vh;
+    padding: 0;
   }
 
   .picture {
