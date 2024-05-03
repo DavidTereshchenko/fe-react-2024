@@ -1,15 +1,14 @@
 import type { FC } from 'react';
 
 interface Icon {
-    key: number;
     url: string;
     img: string;
     altName: string;
 }
 
-export const SocialIcon: FC<Icon> = (props) => (
+export const SocialNetworkIcon: FC<Icon> = (props) => (
     <li>
-        <a href={props.url} key={props.key}>
+        <a href={props.url}>
             <img src={props.img} alt={props.altName} />
         </a>
     </li>

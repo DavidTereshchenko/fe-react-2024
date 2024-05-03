@@ -1,11 +1,11 @@
 import { socialNetworksData } from '@/components/constans/socialNetworksData.ts';
-import { SocialIcon } from '@/components/SocialIcon/SocialIcon.tsx';
 import styles from '@/components/SocialIcons/SocialIcons.module.css';
+import { SocialNetworkIcon } from '@/components/SocialNetworkIcon/SocialNetworkIcon.tsx';
 
 export const SocialIcons = () => (
-    <ul className={styles.socialIcon}>
+    <ul className={styles.socialIcons}>
         {socialNetworksData.map((social, index) => (
-            <SocialIcon key={index} url={social.url} img={social.img} altName={social.altName} />
+            <SocialNetworkIcon key={index} url={social.url} img={social.img} altName={social.altName} />
         ))}
     </ul>
 );
