@@ -9,11 +9,11 @@ const Menu = (props: { routeUrl: string }) => (
     <div className={styles.menu}>
         <nav className={styles.screenTab}>
             <ul className={styles.menuList}>
-                <NavLink to={`${props.routeUrl}/about`} className={({ isActive }) => (isActive ? styles.active : null)}>
+                <NavLink to={`${props.routeUrl}/about`} className={({ isActive }) => (isActive ? styles.active : undefined)}>
                     About
                 </NavLink>
 
-                <NavLink to={`${props.routeUrl}/productsList`} className={({ isActive }) => (isActive ? styles.active : null)}>
+                <NavLink to={`${props.routeUrl}/productsList`} className={({ isActive }) => (isActive ? styles.active : undefined)}>
                     Products
                 </NavLink>
             </ul>
