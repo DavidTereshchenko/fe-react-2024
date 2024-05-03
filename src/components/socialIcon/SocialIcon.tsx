@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 
 interface Icon {
+    key: number;
     url: string;
     img: string;
     altName: string;
@@ -8,7 +9,7 @@ interface Icon {
 
 export const SocialIcon: FC<Icon> = (props) => (
     <li>
-        <a href={props.url}>
+        <a href={props.url} key={props.key}>
             <img src={props.img} alt={props.altName} />
         </a>
     </li>

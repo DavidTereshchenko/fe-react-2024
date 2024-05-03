@@ -1,5 +1,6 @@
 .basketBlock {
   position: relative;
+  cursor: pointer;
 }
 
 .basketCounter {
