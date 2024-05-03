@@ -1,0 +1,43 @@
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 132px;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid var(--grey3);
+  padding: 15px;
+  gap: 20px;
+  width: 15.625rem;
+}
+
+.cardImage {
+  border-radius: 20px;
+  width: 12.5625rem;
+  height: 12.8125rem;
+}
+
+.cardTitle {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardPrise {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.currency {
+  font-size: 14px;
+}

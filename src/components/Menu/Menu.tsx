@@ -1,18 +1,24 @@
+import { NavLink } from 'react-router-dom';
+
+import { BasketHeader } from '@/components/BasketHeader/BasketHeader.tsx';
 import styles from '@/components/Menu/Menu.module.css';
 import login from '@/img/buttons/login.svg';
 import singUp from '@/img/buttons/singUp.svg';
-import basket from '@/img/cart.svg';
 
-const Menu = () => (
+const Menu = (props: { routeUrl: string }) => (
     <div className={styles.menu}>
         <nav className={styles.screenTab}>
             <ul className={styles.menuList}>
-                <li>About</li>
-                <li>Product</li>
-                <li className={styles.account}>Your Account</li>
+                <NavLink to={`${props.routeUrl}/about`} className={({ isActive }) => (isActive ? styles.active : null)}>
+                    About
+                </NavLink>
+
+                <NavLink to={`${props.routeUrl}/productsList`} className={({ isActive }) => (isActive ? styles.active : null)}>
+                    Products
+                </NavLink>
             </ul>
         </nav>
-        <img src={basket} alt="basket" className={styles.basket} />
+        <BasketHeader />
         <div className={styles.accountButtons}>
             <button className={styles.loginButton}>
                 <img src={login} alt="login" />
