@@ -1,19 +1,16 @@
-import { useState } from 'react';
+import type { FC, MouseEventHandler } from 'react';
 
 import styles from '@/components/BasketHeader/BasketHeader.module.css';
 import basket from '@/img/price/basketDark.svg';
 
-export const BasketCard = () => {
-    const [count, setCount] = useState(0);
+interface LocalStore {
+    onClick: MouseEventHandler<HTMLImageElement>;
+    quantity: number | undefined;
+}
 
-    const handleBasket = () => {
-        setCount(count + 1);
-    };
-
-    return (
-        <div className={styles.basketBlock} onClick={handleBasket}>
-            <img src={basket} alt="basket" className={styles.basket} />
-            <span className={styles.basketCounter}>{count}</span>
-        </div>
-    );
-};
+export const BasketCard: FC<LocalStore> = (props) => (
+    <div className={styles.basketBlock}>
+        <img src={basket} alt="basket" onClick={props.onClick} className={styles.basket} />
+        {typeof props.quantity === 'number' && props.quantity >= 1 && <span className={styles.basketCounter}>{props.quantity}</span>}
+    </div>
+);
