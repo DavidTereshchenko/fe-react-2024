@@ -2,11 +2,15 @@ import LogoAndMode from '@/components/LogoAndMode/LogoAndMode.tsx';
 import Menu from '@/components/Menu/Menu.tsx';
 
 import styles from './Header.module.css';
-const Header = (props: { route: string }) => (
+
+// interface HeaderInt {
+//     countHeader: number;
+// }
+const Header = (props: { openTabScreen: () => void; basketCount: number }) => (
     <header className={styles.header}>
         <div className={styles.headerBlock}>
-            <LogoAndMode routeHome={props.route} />
-            <Menu routeUrl={props.route} />
+            <LogoAndMode />
+            <Menu openTabScreen={props.openTabScreen} basketCount={props.basketCount} />
         </div>
     </header>
 );
