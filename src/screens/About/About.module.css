@@ -63,7 +63,7 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 3.75rem;
     height: 100vh;
-    padding: 0;
+    padding: 0 30px;
   }
 
   .picture {
