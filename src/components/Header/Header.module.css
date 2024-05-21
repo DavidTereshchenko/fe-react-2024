@@ -1,26 +1,210 @@
-.header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 5rem;
-  background-color: var(--darkestGrey);
-  color: var(--white);
-}
-
-.headerBlock {
+.headerWrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding: 15px 30px;
-  height: 3.125rem;
+  background-color: var(--darkestGrey);
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
-@media (min-width: 850px) {
+.headerContainer {
+  display: flex;
+  max-width: 1175px;
+}
 
-  .headerBlock {
-    max-width: 73.4375rem;
+.menuSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.burgerButton {
+  display: none;
+}
+
+.authWrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.authButton {
+  height: 34px;
+  background: var(--grey1);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.signUpButton {
+  height: 34px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  border-radius: 40px;
+  background: var(--mainRed);
+  padding: 10px;
+}
+
+.pages {
+  display: flex;
+  gap: 48px;
+}
+
+.activeButton {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--white)
+}
+
+.themeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pipe {
+  height: 20px;
+  border: 1px solid #656565;
+}
+
+.themeButton {
+  padding: 0;
+}
+
+.cartButton {
+  display: flex;
+  position: relative;
+}
+
+.counter {
+  width: 17px;
+  height: 17px;
+  font-size: 10px;
+  color: var(--white);
+  background: var(--mainRed);
+  position: absolute;
+  z-index: 999;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+
+@media (prefers-color-scheme: light) {
+
+  .defaultLink {
+    color: var(--white)
   }
 }
 
+@media screen and (min-width: 200px) and (max-width: 748px) {
+
+  .headerContainer {
+    padding: 15px 30px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .burgerButton {
+    display: block;
+    padding: 0;
+  }
+
+  .authWrapper {
+    display: none;
+  }
+
+  .pages {
+    display: none;
+  }
+
+  .themeWrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 748px) and (max-width: 1050px) {
+
+  .headerContainer {
+    height: 80px;
+    padding: 0 30px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .rightHeader {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .leftHeader {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menuSide {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+
+  .headerWrapper {
+    width: 100%;
+  }
+
+  .headerContainer {
+    height: 80px;
+    padding: 0 53px;
+    justify-content: space-between;
+    align-items: center;
+    width: 1175px;
+    margin: 0 auto;
+  }
+
+  .rightHeader {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .leftHeader {
+    display: flex;
+    gap: 50px;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+
+  .headerWrapper {
+    width: 100%;
+  }
+
+  .rightHeader {
+    width: 53%;
+  }
+
+  .headerContainer {
+    max-width: 1175px;
+  }
+}

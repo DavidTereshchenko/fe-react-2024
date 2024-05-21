@@ -1,0 +1,15 @@
+.categoryBlock {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.categoryItem {
+  border: 1px solid var(--grey4);
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+}

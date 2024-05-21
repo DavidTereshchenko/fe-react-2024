@@ -1,0 +1,28 @@
+.searchInput {
+  border: 1px solid var(--grey4);
+  border-radius: 20px;
+  padding: 11px 0 11px 20px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  width: 100%;
+  color: var(--text-primary);
+  background-color: var(--white);
+}
+
+.searchBlock {
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  margin-left: -40px;
+}
+
+@media (min-width: 100px) {
+
+  .searchInput {
+    min-width: 275px;
+  }
+}

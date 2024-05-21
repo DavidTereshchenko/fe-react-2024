@@ -1,0 +1,26 @@
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categoryAndSort {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+
+  .navContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .categoryAndSort {
+    display: flex;
+    flex-direction: row;
+    gap: 39px;
+  }
+}

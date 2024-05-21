@@ -1,57 +1,36 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from '@/App.module.css';
-import About from '@/components/About/About.tsx';
 import FooterComponent from '@/components/Footer/Footer.component.tsx';
 import Header from '@/components/Header/Header.tsx';
-import { ProductsList } from '@/components/ProductsList/ProductsList.tsx';
-
-interface BasketItem {
-    id: number;
-    quantity: number;
-    length?: number;
-}
+import About from '@/screens/About/About.tsx';
+import { ProductsList } from '@/screens/ProductsList/ProductsList.tsx';
+import type { ActivePage } from '@/types/state.ts';
+import { getCartTotalAmount } from '@/utils/getCartTotalAmount.ts';
 
 function App() {
-    const [isOpenTab, setIsOpenTab] = useState(true);
+    const [activePage, setActivePage] = useState<ActivePage>('about');
+    const [totalCart, setTotalCart] = useState<number>(0);
 
-    const [basketItems, setBasketItems] = useState<BasketItem[]>([]);
-    const [productQuantities, setProductQuantities] = useState<Record<number, number>>([]);
+    useEffect(() => {
+        const total = getCartTotalAmount();
+        setTotalCart(total);
+    }, []);
 
-    const addToBasket = (productId: number) => {
-        const existingBasket = JSON.parse(localStorage.getItem('basket') || '[]');
-        const currentQuantity = productQuantities[productId] || 1;
-
-        const itemExists = existingBasket.find((item: { id: number }) => item.id === productId);
-
-        if (itemExists) {
-            const updatedBasket = existingBasket.map((item: { id: number; quantity: number }) => {
-                if (item.id === productId) {
-                    return { ...item, quantity: item.quantity + 1 };
-                }
-                return item;
-            });
-
-            setBasketItems(itemExists);
-            localStorage.setItem('basket', JSON.stringify(updatedBasket));
-            setProductQuantities({ ...productQuantities, [productId]: currentQuantity + 1 });
-        } else {
-            const newBasketItem = { id: productId, quantity: 1 };
-            setBasketItems([...existingBasket, newBasketItem]);
-            localStorage.setItem('basket', JSON.stringify([...existingBasket, newBasketItem]));
-        }
+    const handleActivePage = (page: ActivePage) => {
+        setActivePage(page);
     };
 
-    const toggleTabScreen = () => {
-        setIsOpenTab(!isOpenTab);
+    const updateTotalCart = () => {
+        const total = getCartTotalAmount();
+        setTotalCart(total);
     };
 
     return (
         <>
-            <div className={styles.wrapper}>
-                <Header openTabScreen={toggleTabScreen} basketCount={basketItems.length} />
-                {!isOpenTab && <About />}
-                {isOpenTab && <ProductsList addLocalStore={addToBasket} quantity={productQuantities} />}
+            <div className={styles.container}>
+                <Header activePage={activePage} handleActivePage={handleActivePage} totalCart={totalCart} />
+                {activePage === 'about' ? <About /> : <ProductsList updateTotalCart={updateTotalCart} />}
                 <FooterComponent />
             </div>
         </>

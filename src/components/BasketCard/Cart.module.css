@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.basket {
+  filter: var(--basket);
+}
+
 .basketCounter {
   position: absolute;
   display: flex;
