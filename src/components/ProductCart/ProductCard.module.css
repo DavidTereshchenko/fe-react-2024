@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid var(--grey4);
+  padding: 15px;
+  gap: 20px;
+  width: 15.625rem;
+}
+
+.cardImage {
+  border-radius: 20px;
+  width: 12.5625rem;
+  height: 12.8125rem;
+}
+
+.cardTitle {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25px;
+  color: var(--text-primary);
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardPrise {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.currency {
+  font-size: 14px;
+}
+
+.cartBlock {
+  display: flex;
+  position: relative;
+}
+
+.cardIcon {
+  padding: 0;
+  filter: var(--basketDark);
+}
+
+.counter {
+  position: absolute;
+  top: -4px;
+  left: 10px;
+  width: 17px;
+  height: 17px;
+  font-size: 10px;
+  color: var(--darkestGrey);
+  background: var(--mainRed);
+  z-index: 999;
+  border-radius: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}

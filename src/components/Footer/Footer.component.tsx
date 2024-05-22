@@ -1,10 +1,10 @@
 import styles from '@/components/Footer/Footer.module.css';
-import SocialIcon from '@/components/SocialIcon/SocialIcon.tsx';
+import { SocialIcons } from '@/components/SocialIcons/SocialIcons.tsx';
 
 const FooterComponent = () => (
     <footer className={styles.footer}>
         <div className={styles.footerContainer}>
-            <SocialIcon />
+            <SocialIcons />
             <p className={styles.footerText}>
                 Made with 💗 on course{' '}
                 <a href="https://www.mastersacademy.education/frontend-react-it" className={styles.course}>
