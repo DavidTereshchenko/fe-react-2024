@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import useLocalStorage from 'use-local-storage';
 
@@ -45,7 +45,9 @@ function App() {
                         handleActivePage={handleActivePage}
                         totalCart={totalCart}
                     />
-                    {activePage === 'about' ? <About /> : <ProductsList updateTotalCart={updateTotalCart} />}
+                    <main className={styles.main}>
+                        {activePage === 'about' ? <About /> : <ProductsList updateTotalCart={updateTotalCart} />}
+                    </main>
                     <FooterComponent />
                 </div>
             </div>
