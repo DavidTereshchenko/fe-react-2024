@@ -93,3 +93,10 @@
     margin-bottom: 1.25rem;
   }
 }
+
+@media (min-width: 1200px) {
+
+  .aboutContainer {
+    padding: 0;
+  }
+}

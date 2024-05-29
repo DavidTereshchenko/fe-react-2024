@@ -13,7 +13,7 @@
 
 .sortSelect {
   display: flex;
-  border: 1px solid var(--grey4);
+  border: 1px solid var(--br-primary);
   color: var(--text-primary);
   border-radius: 50px;
   padding: 10px 40px 10px 20px;

@@ -20,20 +20,22 @@
   min-width: 24.375rem;
 }
 
-.light-theme {
+[data-theme="light"] {
   --bg-primary: var(--white);
   --text-primary: var(--textColor);
   --br-primary: var(--grey4);
   --br-secondary: var(--grey3);
   --basket: var(--basketDark);
+  --inputText: var(--darkestGrey)
 }
 
-.dark-theme {
+[data-theme="dark"] {
   --bg-primary: var(--darkestGrey);
   --text-primary: var(--white);
   --br-primary: var(--grey5);
   --br-secondary: var(--grey1);
   --basket: var(--basketWhite);
+  --inputText: var(--white)
 }
 
 * {
@@ -86,7 +88,7 @@ button {
   font-weight: inherit;
   font-size: inherit;
   cursor: pointer;
-  color: var(--textColor);
-  background-color: var(--bg-primary);
+  background: none;
+  color: var(--white);
 }
 

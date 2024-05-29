@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 132px;
-  margin: 0 auto;
   justify-content: center;
   row-gap: 30px;
   padding: 0 30px;
@@ -22,8 +21,14 @@
     justify-content: center;
     margin-top: 125px;
     max-width: 1175px;
-    padding: 0 30px;
     row-gap: 53px;
+  }
+}
+
+@media (min-width: 1175px) {
+
+  .productsContainer {
+    padding: 0;
   }
 }
 

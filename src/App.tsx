@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
+
+import useLocalStorage from 'use-local-storage';
 
 import styles from '@/App.module.css';
 import FooterComponent from '@/components/Footer/Footer.component.tsx';
@@ -9,8 +11,10 @@ import type { ActivePage } from '@/types/state.ts';
 import { getCartTotalAmount } from '@/utils/getCartTotalAmount.ts';
 
 function App() {
+    const isPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const [activePage, setActivePage] = useState<ActivePage>('about');
     const [totalCart, setTotalCart] = useState<number>(0);
+    const [isTheme, setIsTheme] = useLocalStorage('light', isPreference);
 
     useEffect(() => {
         const total = getCartTotalAmount();
@@ -25,13 +29,25 @@ function App() {
         const total = getCartTotalAmount();
         setTotalCart(total);
     };
+    const handleTheme = (mode: string) => {
+        const newTheme = isTheme ? mode : 'dark';
+        setIsTheme(newTheme);
+    };
 
     return (
         <>
-            <div className={styles.container}>
-                <Header activePage={activePage} handleActivePage={handleActivePage} totalCart={totalCart} />
-                {activePage === 'about' ? <About /> : <ProductsList updateTotalCart={updateTotalCart} />}
-                <FooterComponent />
+            <div className={styles.container} data-theme={isTheme}>
+                <div className={styles.wrapper}>
+                    <Header
+                        activePage={activePage}
+                        changeColorIcon={isTheme}
+                        handleTheme={handleTheme}
+                        handleActivePage={handleActivePage}
+                        totalCart={totalCart}
+                    />
+                    {activePage === 'about' ? <About /> : <ProductsList updateTotalCart={updateTotalCart} />}
+                    <FooterComponent />
+                </div>
             </div>
         </>
     );

@@ -5,7 +5,7 @@
 }
 
 .categoryItem {
-  border: 1px solid var(--grey4);
+  border: 1px solid var(--br-primary);
   border-radius: 50px;
   padding: 10px 20px;
   font-size: 14px;
