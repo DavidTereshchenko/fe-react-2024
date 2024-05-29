@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface PropertyIcon {
-    theme: string;
+    theme: string | boolean;
 }
 export const SunIcon: React.FC<PropertyIcon> = ({ theme }) => (
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

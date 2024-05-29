@@ -16,10 +16,10 @@ interface HeaderProps {
     activePage: ActivePage;
     totalCart: number;
     handleTheme: (mode: string) => void;
-    changeColorIcon: string | boolean;
+    isTheme: string | boolean;
 }
 
-const Header: FC<HeaderProps> = ({ handleActivePage, activePage, totalCart, handleTheme, changeColorIcon }) => (
+const Header: FC<HeaderProps> = ({ handleActivePage, activePage, totalCart, handleTheme, isTheme }) => (
     <header className={styles.headerWrapper}>
         <div className={styles.headerContainer}>
             <div className={styles.leftHeader}>
@@ -28,13 +28,13 @@ const Header: FC<HeaderProps> = ({ handleActivePage, activePage, totalCart, hand
                 </div>
                 <div className={styles.themeWrapper}>
                     <button className={styles.themeButton} onClick={() => handleTheme('light')}>
-                        <SunIcon theme={changeColorIcon} />
+                        <SunIcon theme={isTheme} />
                     </button>
 
                     <div className={styles.pipe}></div>
 
                     <button className={styles.themeButton} onClick={() => handleTheme('dark')}>
-                        <MoonIcon theme={changeColorIcon} />
+                        <MoonIcon theme={isTheme} />
                     </button>
                 </div>
             </div>
