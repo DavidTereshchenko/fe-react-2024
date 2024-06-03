@@ -14,7 +14,7 @@ function App() {
     const isPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const [activePage, setActivePage] = useState<ActivePage>('about');
     const [totalCart, setTotalCart] = useState<number>(0);
-    const [isTheme, setIsTheme] = useLocalStorage<string | boolean>('light', isPreference);
+    const [isTheme, setIsTheme] = useLocalStorage<string | boolean>('theme', isPreference);
 
     useEffect(() => {
         const total = getCartTotalAmount();

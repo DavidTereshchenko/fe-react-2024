@@ -7,6 +7,7 @@ const Sort = () => (
         <p className={styles.sortText}>Sort by:</p>
         <select className={styles.sortSelect}>
             <option className={styles.sortSelectOption}>Price (High - Low)</option>
+            <option>Price (Low - High)</option>
             <option>Newest</option>
             <option>Oldest</option>
         </select>

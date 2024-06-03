@@ -477,25 +477,5 @@
       "creationAt": "2024-04-26T08:20:47.094Z",
       "updatedAt": "2024-04-26T08:20:47.094Z"
     }
-  },
-  {
-    "id": 50,
-    "title": "Trendy Pink-Tinted Sunglasses",
-    "price": 38,
-    "description": "Step up your style game with these fashionable black-framed, pink-tinted sunglasses. Perfect for making a statement while protecting your eyes from the glare. Their bold color and contemporary design make these shades a must-have accessory for any trendsetter looking to add a pop of color to their ensemble.",
-    "images": [
-      "https://i.imgur.com/0qQBkxX.jpg",
-      "https://i.imgur.com/I5g1DoE.jpg",
-      "https://i.imgur.com/myfFQBW.jpg"
-    ],
-    "creationAt": "2024-04-26T08:20:47.173Z",
-    "updatedAt": "2024-04-26T08:20:47.173Z",
-    "category": {
-      "id": 5,
-      "name": "Miscellaneous",
-      "image": "https://i.imgur.com/BG8J0Fj.jpg",
-      "creationAt": "2024-04-26T08:20:47.094Z",
-      "updatedAt": "2024-04-26T08:20:47.094Z"
-    }
   }
 ]

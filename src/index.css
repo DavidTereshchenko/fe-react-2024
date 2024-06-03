@@ -38,6 +38,18 @@
   --inputText: var(--white)
 }
 
+@media (prefers-color-scheme: dark) {
+
+  html {
+    --bg-primary: var(--darkestGrey);
+    --text-primary: var(--white);
+    --br-primary: var(--grey5);
+    --br-secondary: var(--grey1);
+    --basket: var(--basketWhite);
+    --inputText: var(--white)
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -4,8 +4,8 @@
   border-radius: 20px;
   border: 1px solid var(--br-primary);
   padding: 15px;
+  flex: calc(20% - 20px);
   gap: 20px;
-  width: 15.625rem;
 }
 
 .cardImage {
@@ -62,3 +62,4 @@
   justify-content: center;
   user-select: none;
 }
+
