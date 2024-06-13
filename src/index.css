@@ -13,6 +13,8 @@
   --basketWhite: invert(93%) sepia(100%) saturate(0%) hue-rotate(217deg) brightness(107%) contrast(107%);
   --basketDark: brightness(0) saturate(100%) invert(3%) sepia(7%) saturate(1369%) hue-rotate(46deg) brightness(95%) contrast(91%);
   --icon-color: #FFF;
+  --arrowColorSortLight: #FFF;
+  --arrowColorSortDark: #111;
 
 
   --basicText: 1rem;
@@ -26,7 +28,9 @@
   --br-primary: var(--grey4);
   --br-secondary: var(--grey3);
   --basket: var(--basketDark);
-  --inputText: var(--darkestGrey)
+  --inputText: var(--darkestGrey);
+  --arrowSort: var(--arrowColorSortDark);
+  --bgSelect: var(--white);
 }
 
 [data-theme="dark"] {
@@ -35,7 +39,9 @@
   --br-primary: var(--grey5);
   --br-secondary: var(--grey1);
   --basket: var(--basketWhite);
-  --inputText: var(--white)
+  --inputText: var(--white);
+  --arrowSort: var(--arrowColorSortLight);
+  --bgSelect: var(--grey1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,7 +52,9 @@
     --br-primary: var(--grey5);
     --br-secondary: var(--grey1);
     --basket: var(--basketWhite);
-    --inputText: var(--white)
+    --inputText: var(--white);
+    --arrowSort: var(--arrowColorSortLight);
+    --bgSelect: var(--grey1);
   }
 }
 

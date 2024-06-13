@@ -8,7 +8,7 @@ import Header from '@/components/Header/Header.tsx';
 import About from '@/screens/About/About.tsx';
 import { ProductsList } from '@/screens/ProductsList/ProductsList.tsx';
 import type { ActivePage } from '@/types/state.ts';
-import { getCartTotalAmount } from '@/utils/getCartTotalAmount.ts';
+import { getProductsCartAmount } from '@/utils/getCartTotalAmount.ts';
 
 function App() {
     const isPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -17,7 +17,7 @@ function App() {
     const [isTheme, setIsTheme] = useLocalStorage<string | boolean>('theme', isPreference);
 
     useEffect(() => {
-        const total = getCartTotalAmount();
+        const total = getProductsCartAmount();
         setTotalCart(total);
     }, []);
 
@@ -26,7 +26,7 @@ function App() {
     };
 
     const updateTotalCart = () => {
-        const total = getCartTotalAmount();
+        const total = getProductsCartAmount();
         setTotalCart(total);
     };
     const handleTheme = (mode: string) => {
