@@ -14,18 +14,10 @@ const Sort = () => (
                 </button>
             </button>
             <div className={styles.dropdownContent}>
-                <a href="#" className={styles.listText}>
-                    Price (High - low)
-                </a>
-                <a href="#" className={styles.listText}>
-                    Price (Low - High)
-                </a>
-                <a href="#" className={styles.listText}>
-                    Newest
-                </a>
-                <a href="#" className={styles.listText}>
-                    Oldest
-                </a>
+                <li className={styles.listText}>Price (High - low)</li>
+                <li className={styles.listText}>Price (Low - High)</li>
+                <li className={styles.listText}>Newest</li>
+                <li className={styles.listText}>Oldest</li>
             </div>
         </div>
     </label>
