@@ -32,6 +32,13 @@
 @media (min-width: 600px) {
 
   .footer {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 1175px) {
+
+  .footer {
     padding: 0;
   }
 }

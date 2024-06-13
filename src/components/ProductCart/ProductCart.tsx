@@ -1,52 +1,55 @@
-import type { FC } from 'react';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
+import { CartIcon } from '@/components/CartIcon.tsx';
 import styles from '@/components/ProductCart/ProductCard.module.css';
-import cartIcon from '@/img/basketWhite.svg';
+import type { Product } from '@/models/product.model.ts';
+import type { Cart } from '@/types/cart.type.ts';
 
-interface Card {
-    id: number;
-    title: string;
-    price: number;
-    images: string[];
+interface ProductCardProps {
+    product: Product;
     onCartChange: () => void;
+    productsCart: Cart;
+    setProductsCart: (cart: Cart) => void;
 }
 
-export const ProductCart: FC<Card> = (props) => {
-    const initialProductIds = localStorage.getItem('cartIds');
-    const [productIds, setProductIds] = useState<string[]>(initialProductIds ? JSON.parse(initialProductIds) : []);
+const MAX_TITLE_LENGTH = 33;
 
-    const isInCart = productIds.includes(props.id.toString());
+export const ProductCart: React.FC<ProductCardProps> = ({ productsCart, setProductsCart, onCartChange, product }) => {
+    const isInCart = productsCart[product.id.toString()];
+
+    const productCount = isInCart?.count || 0;
 
     const handleCartClick = () => {
-        const inCart = initialProductIds ? JSON.parse(initialProductIds) : [];
-        const updatedCartIds = isInCart ? inCart?.filter((id: string) => id !== props.id.toString()) : [...inCart, props.id.toString()];
+        const updatedCart: Cart = isInCart
+            ? { ...productsCart, [product.id]: { count: isInCart.count + 1 } }
+            : { ...productsCart, [product.id]: { count: 1 } };
 
-        localStorage.setItem('cartIds', JSON.stringify(updatedCartIds));
-        setProductIds(updatedCartIds);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+        setProductsCart(updatedCart);
     };
 
     useEffect(() => {
-        props.onCartChange();
-    }, [productIds, props, props.onCartChange]);
+        onCartChange();
+    }, [onCartChange, productCount]);
+
+    const getTruncatedTitle = (titleCart: string) => {
+        if (titleCart.length <= MAX_TITLE_LENGTH) {
+            return product.title;
+        }
+
+        return `${product.title.slice(0, MAX_TITLE_LENGTH - 3)} ...`;
+    };
 
     return (
-        <main className={styles.productsContainer}>
-            <div className={styles.card} key={props.id}>
-                <img src={props.images[0]} className={styles.cardImage} alt="product" />
-                <h3 className={styles.cardTitle}>{props.title}</h3>
-                <div className={styles.cardFooter}>
-                    <p className={styles.cardPrise}>
-                        {props.price} <span className={styles.currency}>₴</span>
-                    </p>
-                    <div className={styles.cartBlock}>
-                        <button onClick={handleCartClick} className={styles.cardIcon}>
-                            <img src={cartIcon} alt="cart icon" className={styles.cardIcon} />
-                        </button>
-                        {isInCart && <div className={styles.counter}>1</div>}
-                    </div>
-                </div>
+        <div className={styles.card}>
+            <img src={product.images[0]} className={styles.cardImage} alt="product" />
+            <h3 className={styles.cardTitle}>{getTruncatedTitle(product.title)}</h3>
+            <div className={styles.cardFooter}>
+                <p className={styles.cardPrise}>
+                    {product.price} <span className={styles.currency}>₴</span>
+                </p>
+                <CartIcon isInCart={isInCart} productCount={productCount} handleClick={handleCartClick} />
             </div>
-        </main>
+        </div>
     );
 };

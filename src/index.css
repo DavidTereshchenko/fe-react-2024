@@ -13,6 +13,8 @@
   --basketWhite: invert(93%) sepia(100%) saturate(0%) hue-rotate(217deg) brightness(107%) contrast(107%);
   --basketDark: brightness(0) saturate(100%) invert(3%) sepia(7%) saturate(1369%) hue-rotate(46deg) brightness(95%) contrast(91%);
   --icon-color: #FFF;
+  --arrowColorSortLight: #FFF;
+  --arrowColorSortDark: #111;
 
 
   --basicText: 1rem;
@@ -20,26 +22,47 @@
   min-width: 24.375rem;
 }
 
-.light-theme {
+[data-theme="light"] {
   --bg-primary: var(--white);
   --text-primary: var(--textColor);
   --br-primary: var(--grey4);
   --br-secondary: var(--grey3);
   --basket: var(--basketDark);
+  --inputText: var(--darkestGrey);
+  --arrowSort: var(--arrowColorSortDark);
+  --bgSelect: var(--white);
 }
 
-.dark-theme {
+[data-theme="dark"] {
   --bg-primary: var(--darkestGrey);
   --text-primary: var(--white);
   --br-primary: var(--grey5);
   --br-secondary: var(--grey1);
   --basket: var(--basketWhite);
+  --inputText: var(--white);
+  --arrowSort: var(--arrowColorSortLight);
+  --bgSelect: var(--grey1);
+}
+
+@media (prefers-color-scheme: dark) {
+
+  html {
+    --bg-primary: var(--darkestGrey);
+    --text-primary: var(--white);
+    --br-primary: var(--grey5);
+    --br-secondary: var(--grey1);
+    --basket: var(--basketWhite);
+    --inputText: var(--white);
+    --arrowSort: var(--arrowColorSortLight);
+    --bgSelect: var(--grey1);
+  }
 }
 
 * {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 * {
@@ -86,7 +109,7 @@ button {
   font-weight: inherit;
   font-size: inherit;
   cursor: pointer;
-  color: var(--textColor);
-  background-color: var(--bg-primary);
+  background: none;
+  color: var(--white);
 }
 

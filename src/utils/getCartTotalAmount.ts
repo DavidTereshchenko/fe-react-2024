@@ -1,6 +1,5 @@
-export const getCartTotalAmount = (): number => {
-    const totalArray = localStorage.getItem('cartIds');
-    const total = totalArray ? JSON.parse(totalArray) : [];
+export const getProductsCartAmount = (): number => {
+    const cart = JSON.parse(localStorage.getItem('cart') || '{}');
 
-    return total.length;
+    return Object.keys(cart).reduce((accumulator, key) => accumulator + cart[key].count, 0);
 };

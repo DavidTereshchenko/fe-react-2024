@@ -1,5 +1,5 @@
 .searchInput {
-  border: 1px solid var(--grey4);
+  border: 1px solid var(--br-primary);
   border-radius: 20px;
   padding: 11px 0 11px 20px;
   outline: none;
@@ -7,8 +7,8 @@
   font-weight: 300;
   letter-spacing: 1px;
   width: 100%;
-  color: var(--text-primary);
-  background-color: var(--white);
+  color: var(--inputText);
+  background-color: var(--bg-primary);
 }
 
 .searchBlock {
